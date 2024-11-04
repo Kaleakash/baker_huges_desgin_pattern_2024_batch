@@ -1,0 +1,11 @@
+package com.service;
+
+@Configuration
+public class MyConfiguration {
+
+    @Bean
+    @ConditionalOnClass(name = "com.example.SomeExternalClass")
+    public MyService myService() {
+        return new MyService();
+    }
+}

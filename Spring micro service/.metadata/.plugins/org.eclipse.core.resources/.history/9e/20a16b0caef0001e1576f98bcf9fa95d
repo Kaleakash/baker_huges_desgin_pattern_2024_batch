@@ -1,0 +1,28 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.Paypal;
+import com.repository.PaypalRepository;
+
+@Service
+public class AccountService {
+
+	@Autowired
+	PaypalRepository paypalRepository;
+	
+	public String CreateAccount(Paypal paypal) {
+		Optional<Paypal> result = paypalRepository.findById(paypal.getEmailid());
+		if(result.isPresent()) {
+			return "Account already exists";
+		}else {
+			paypalRepository.save(paypal);
+			return "Account created successfully";
+		}
+	}
+	
+	public String findBalanceAmount()
+}

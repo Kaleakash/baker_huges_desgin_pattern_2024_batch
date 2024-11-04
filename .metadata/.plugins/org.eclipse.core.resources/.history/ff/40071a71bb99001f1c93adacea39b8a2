@@ -1,0 +1,14 @@
+package com.service;
+
+public class CustomService {
+    private final String message;
+
+    public CustomService(String message) {
+        this.message = message;
+    }
+
+    public void printMessage() {
+        System.out.println("CustomService message: " + message);
+    }
+}
+

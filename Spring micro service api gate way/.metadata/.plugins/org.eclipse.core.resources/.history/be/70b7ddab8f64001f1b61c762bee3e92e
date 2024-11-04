@@ -1,0 +1,12 @@
+server:
+ port:9595
+spring:
+ application.name: springapigateway
+ cloud:
+  gateway:
+   routes:
+    - id: EMPLOYEESERVICE
+      uri: lb://EMPLOYEESERVICE
+      predicates:
+       - Path=/employee/**
+	- id: CUSTOMERSERVICE

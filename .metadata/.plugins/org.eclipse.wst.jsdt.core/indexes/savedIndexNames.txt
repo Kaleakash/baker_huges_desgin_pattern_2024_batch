@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+C:\Users\akash\Desktop\Design Pattren Example\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1629530467.index
+654185646.index
+3464219498.index
+1818009224.index

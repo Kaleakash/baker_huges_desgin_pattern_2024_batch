@@ -1,0 +1,21 @@
+package com.main;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.config.MyConfiguration;
+import com.service.MyService;
+
+@SpringBootApplication
+public class ConditionalAnnotationDesignPatternApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ConditionalAnnotationDesignPatternApplication.class, args);
+		
+		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(MyConfiguration.class);
+		MyService ser = (MyService)ac.getBean("myService");
+		ser.display1();
+	}
+
+}

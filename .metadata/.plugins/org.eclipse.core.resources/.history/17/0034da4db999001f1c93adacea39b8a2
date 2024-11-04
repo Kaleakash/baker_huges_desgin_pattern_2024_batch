@@ -1,0 +1,26 @@
+package com.main;
+
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.config.MyConfiguration;
+import com.service.MyService;
+
+@SpringBootApplication
+public class ConditionalAnnotationDesignPatternApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(ConditionalAnnotationDesignPatternApplication.class, args);
+		
+		 // Check if the bean is available
+        if (context.containsBean("myService")) {
+            MyService myService = (MyService) context.getBean("myService");
+            myService.execute();
+        } else {
+            System.out.println("MyService bean is not created because SomeExternalClass is not present.");
+        }
+	}
+
+}

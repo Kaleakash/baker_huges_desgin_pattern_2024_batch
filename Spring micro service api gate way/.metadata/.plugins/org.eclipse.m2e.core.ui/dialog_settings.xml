@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Spring 2024\Spring micro service api gate way\spring-api-gateway"/>
+			<item value="D:\Spring 2024\Spring micro service api gate way\employee-micro-service"/>
+			<item value="D:\Spring 2024\Spring micro service api gate way\customer-micro-sevice"/>
+			<item value="D:\Spring 2024\Spring micro service api gate way\Eureka-Server"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

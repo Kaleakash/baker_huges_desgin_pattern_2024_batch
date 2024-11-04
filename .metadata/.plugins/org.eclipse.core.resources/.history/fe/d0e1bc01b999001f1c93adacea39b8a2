@@ -1,0 +1,9 @@
+package com.service;
+
+
+public class MyService {
+
+	public void display1() {
+		System.out.println("display1 method");
+	}
+}

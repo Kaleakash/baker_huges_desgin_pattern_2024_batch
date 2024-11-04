@@ -1,0 +1,26 @@
+package com.config;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.service.FeatureService;
+import com.service.MyService;
+
+@Configuration
+public class MyConfiguration {
+
+    @Bean
+    @ConditionalOnClass(name = "com.service.SomeExternalClass")
+    public MyService myService() {
+        return new MyService();
+    }
+    
+    // This bean will only be created if the 'feature.enabled' property is set to true
+    @Bean
+    @ConditionalOnProperty(name = "feature.enabled", havingValue = "true")
+    public FeatureService featureService() {
+        return new FeatureService();
+    }
+}

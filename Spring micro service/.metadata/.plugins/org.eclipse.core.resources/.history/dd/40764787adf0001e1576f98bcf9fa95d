@@ -1,0 +1,7 @@
+package com.entity;
+
+public class Paypal {
+private String emailid;
+private int accno;
+
+}

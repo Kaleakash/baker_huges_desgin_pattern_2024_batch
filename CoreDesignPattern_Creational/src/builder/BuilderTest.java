@@ -73,5 +73,6 @@ class BuilderTest {
 	System.out.println(user3);
 	User user4 = new User.UserBuilder("Akash","Kale").age(33).address("Nandini Layout").phone("9900103077").build();
 	System.out.println(user4);
+	User user5 = new User.UserBuilder("A", "B").build();
 	}
 }

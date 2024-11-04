@@ -1,0 +1,16 @@
+package prototype;
+class Product {
+	int pid;
+	public void display() {
+		System.out.println("pid is "+pid);
+	}
+}
+public class CloneDemo {
+	public static void main(String[] args) {
+	Product p1 = new Product();
+	Product p2 = new Product();
+	Product p3 = new Product();
+	p1.pid=100;
+	}
+
+}

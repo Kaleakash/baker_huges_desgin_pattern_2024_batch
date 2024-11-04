@@ -4,7 +4,6 @@ class Emp {
 	private int id;
 	private static final Emp INSTANCE = new Emp();
 	private Emp(){}
-
 	public void setId(int id) {
 		this.id=id;
 	}

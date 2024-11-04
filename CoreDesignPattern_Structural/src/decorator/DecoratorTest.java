@@ -1,5 +1,8 @@
 package decorator;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 interface IceCream {
 	public String makeIceCream();
 }
@@ -41,6 +44,7 @@ class HoneyDecorator extends IceCreamDecorator {
 }
 class DecoratorTest {
 	public static void main(String args[]) {
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	IceCream simpleIceCream = new SimpleIceCream();
 	System.out.println(simpleIceCream.makeIceCream());
 	IceCream nuttIceCream = new NuttyDecorator(new SimpleIceCream());

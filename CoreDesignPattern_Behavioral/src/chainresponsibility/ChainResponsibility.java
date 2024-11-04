@@ -27,7 +27,7 @@ class ClassTeacher extends Staff {
 	}
 	public void handleComplaint(Complaint cpt){
 		if(cpt.getCount()<=4) {
-		System.out.println("Complaint handle by Class Teacher "+cpt.getName());
+		System.out.println("Complaint handle by Class Teacher - "+cpt.getName());
 		}else {
 		stf.handleComplaint(cpt);
 		}
@@ -39,7 +39,19 @@ class VicePrincipal extends Staff {
 	}
 	public void handleComplaint(Complaint cpt){
 		if(cpt.getCount()<=10) {
-		System.out.println("Complaint handle by Vice Principal "+cpt.getName());
+		System.out.println("Complaint handle by Vice Principal - "+cpt.getName());
+		}else {
+		stf.handleComplaint(cpt);
+		}
+	}	
+}
+class Principal extends Staff {
+	Principal(Staff stf) {
+		super(stf);
+	}
+	public void handleComplaint(Complaint cpt){
+		if(cpt.getCount()<=15) {
+		System.out.println("Complaint handle by Principal - "+cpt.getName());
 		}else {
 		stf.handleComplaint(cpt);
 		}
@@ -47,8 +59,8 @@ class VicePrincipal extends Staff {
 }
 class ChainResponsibility {
 	public static void main(String args[]) {
-	ClassTeacher ct = new ClassTeacher(new VicePrincipal(null));
-	ct.handleComplaint(new Complaint(6,"Raj"));	
+	ClassTeacher ct = new ClassTeacher(new VicePrincipal(new Principal(null)));
+	ct.handleComplaint(new Complaint(12,"Raj"));	
 	}
 }
 

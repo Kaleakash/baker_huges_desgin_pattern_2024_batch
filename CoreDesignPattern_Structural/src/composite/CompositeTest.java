@@ -9,6 +9,7 @@ interface Employee {
 	public double getSalary();
 	public void print();
 }
+
 class Manager implements Employee {
 	private String name;
 	private float salary;
